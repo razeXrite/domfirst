@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="zagalovok">Привет мир!</h1>
+
+    <form>
+        <input type="text" placeholder="Name" id="name">
+        <input type="email" placeholder="Email" id="email">
+        <input type="button" value="Отправить" id="submit">
+
+    </form>
+
+    <script>
+        const zag = document.querySelector('#zagalovok');
+        zag.textContent = 'Hello World!';
+
+        let p = document.createElement("p");
+        p.textContent = 'Этот текст был создан динамически';
+        document.body.append(p);
+
+        const btn = document.querySelector('#submit');
+        const nameInp = document.querySelector('#name');
+        const emailInp = document.querySelector('#email');
+
+    
+        
+        btn.addEventListener('click', function vivod(){
+            console.log(nameInp.value);
+            console.log(emailInp.value);
+        });
+
+
+    </script>
+</body>
+</html>
